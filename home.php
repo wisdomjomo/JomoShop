@@ -4,6 +4,11 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/popper.js@1.12.9/dist/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+
     <link rel="stylesheet" href="design.css">
     <link rel="stylesheet" href="slider.css">
     <title>Home</title>
@@ -11,154 +16,34 @@
 <body>
 <?php
 include('header.php'); ?>
-<!-- Slideshow container -->
-<div class="slideshow-container">
-
-  <!-- Full-width images with number and caption text -->
-  <div class="mySlides fade">
-    <div class="numbertext">1 / 3</div>
-    <img src="images/1.jpg" style="width:100%; height: 400px;" id="img">
+<div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
+  <ol class="carousel-indicators">
+    <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
+    <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
+    <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
+  </ol>
+  <div class="carousel-inner">
+    <div class="carousel-item active">
+      <img class="d-block w-100" src="images/1.jpg" alt="First slide">
+    </div>
+    <div class="carousel-item">
+      <img class="d-block w-100" src="images/2.jpg" alt="Second slide">
+    </div>
+    <div class="carousel-item">
+      <img class="d-block w-100" src="images/3.jpg" alt="Third slide">
+    </div>
   </div>
-
-  <div class="mySlides fade">
-    <div class="numbertext">2 / 3</div>
-    <img src="images/2.jpg" style="width:100%; height: 400px;" id="img">
-  </div>
-
-  <div class="mySlides fade">
-    <div class="numbertext">3 / 3</div>
-    <img src="images/3.jpg" style="width:100%; height: 400px;" id="img">
-  </div>
-
-  <!-- Next and previous buttons -->
-  <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
-  <a class="next" onclick="plusSlides(1)">&#10095;</a>
+  <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
+    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+    <span class="sr-only">Previous</span>
+  </a>
+  <a class="carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next">
+    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+    <span class="sr-only">Next</span>
+  </a>
 </div>
-<br>
-
-<!-- The dots/circles -->
-<!-- <div style="text-align:center">
-  <span class="dot" onclick="currentSlide(1)"></span>
-  <span class="dot" onclick="currentSlide(2)"></span>
-  <span class="dot" onclick="currentSlide(3)"></span>
-</div> -->
-<div class="buy">
-    <div class="include">
-    <img src="images/car1.jpg" alt="">
-    </div>
-    <div class="include">
-    <img src="images/car2.png" alt="">
-    </div>
-    <div class="include">
-    <img src="images/car3.jpeg" alt="">
-    </div>
+<div class="checker">
+  <h1>Please check back again. I am still thinking of a better UI for this Project</h1>
 </div>
-<div class="buy">
-    <div class="include">
-    <img src="images/lap1.jpg" alt="">
-    </div>
-    <div class="include">
-    <img src="images/lap2.jpg" alt="">
-    </div>
-    <div class="include">
-    <img src="images/lap3.jpeg" alt="">
-    </div>
-</div>
-<div class="buy">
-    <div class="include">
-    <img src="images/phone1.webp" alt="">
-    </div>
-    <div class="include">
-    <img src="images/phone2.jpg" alt="">
-    </div>
-    <div class="include">
-    <img src="images/phone3.jpg" alt="">
-    </div>
-</div>
-<footer>
-<div class="row primary">
-  <div class="column about">
-
-  <h3>JomoShop</h3>
-
-   <p>
-      Lorem ipsum dolor sit amet consectetur adipisicing elit. Vitae,
-      voluptatem corporis error non,
-  </p>
-
-  <div class="social">
-    <i class="fa-brands fa-facebook-square"></i>
-    <i class="fa-brands fa-instagram-square"></i>
-    <i class="fa-brands fa-twitter-square"></i>
-    <i class="fa-brands fa-youtube-square"></i>
-    <i class="fa-brands fa-whatsapp-square"></i>
-  </div>
-</div>
-
-<div class="column links">
-<h3>Some Links</h3>
-
- <ul class="ul">
-
-  <li class="li">
-   <a href="#faq">F.A.Q</a>
-  </li>
-  <li class="li">
-   <a href="#cookies-policy">Cookies Policy</a>
-  </li>
-  <li class="li">
-   <a href="#terms-of-services">Terms Of Service</a>
-  </li>
-  <liclass="li" >
-   <a href="#support">Support</a>
-  </li>
- </ul>
-
-</div>
-
-
-<div class="column links">
-  <h3>Some Links</h3>
-   <ul class="ul">
-    <li class="li">
-     <a href="#faq">F.A.Q</a>
-    </li>
-    <li class="li">
-     <a href="#cookies-policy">Cookies Policy</a>
-    </li>
-    <li class="li">
-    <a href="#terms-of-services">Terms Of Service</a>
-    </li>
-    <li class="li">
-    <a href="#support">Support</a>
-    </li>
-  </ul>
-</div>
-
-<div class="column subscribe">
- <h3>Newsletter</h3>
-  <div>
-   <input type="email" placeholder="Your email id here" id="input">
-   <button class="button">Subscribe</button>
-  </div>
-
-</div>
-
-</div>
-
-<div class="row copyright">
-  <div class="footer-menu">
-
-  <a href="">Home</a>
-  <a href="">About</a>
-  <a href="">Contact</a>
-  <a href="">Blog</a>
-  <a href="">Social</a>
-
-  </div>
-   <p>Copyright &copy; 2021 JomoShop</p>
-</div>
-</footer>
-<script src="slider.js"></script>
 </body>
 </html>
