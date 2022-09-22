@@ -1,0 +1,277 @@
+body{
+    background-color: pink;
+    height: 100vh;
+}
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+header nav{
+    width: 100%;
+    display: flex;
+    background-color: white;
+    justify-content: space-around;
+}
+
+nav li{
+    display: inline-block;
+    list-style: none;
+    line-height: 70px;
+}
+
+nav a{
+    padding: 30px;
+    font-size: 15px;
+    color: green;
+    font-weight: bold;
+    text-decoration: none;
+    text-transform: uppercase;
+}
+#work{
+    width: 400px;
+    height: 40px;
+    padding-left: 10px;
+    border: 1px solid black;
+    border-radius: 5px;
+    position: relative;
+}
+.ok{
+    width: 80px;
+    position: absolute;
+    right: 500px;
+    top: 21px;
+    cursor: pointer;
+    height: 30px;
+    font-weight: bold;
+    border: none;
+    color: white;
+    background-color: green;
+}
+
+#start{
+    background-color: green;
+    color: white;
+    width: 150px;
+    height: 40px;
+    border: none;
+}
+nav a:hover{
+    text-decoration: none;
+    color: brown;
+}
+
+
+span{
+    color: red;
+}
+
+.index{
+    background-image: url(images/body.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    display: flex;
+    padding: 20px;
+    flex-direction: row;
+    width: 100%;
+    
+}
+
+.p1{
+    background-image: url(images/signup.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 50%;
+    margin-top: 30px;
+    height: 500px;
+}
+
+.form{
+    width: 50%;
+    margin-top: 30px;
+    background-color: white;
+    height: auto;
+    position: relative;
+    font-size: 20px;
+    padding: 15px;
+    color: green;
+}
+
+.form-body{
+    padding: 5px;
+}
+
+input[type=text]{
+    width: 80%;
+    padding-left: 10px;
+    height: 30px;
+}
+input[type=email]{
+    width: 80%;
+    padding-left: 10px;
+    height: 30px;
+}
+input[type=date]{
+    width: 80%;
+    padding-left: 10px;
+    height: 30px;
+}
+input[type=password]{
+    width: 80%;
+    padding-left: 10px;
+    height: 30px;
+}
+
+.form-body-1{
+    margin-top: 10px;
+    text-align: center;
+}
+
+#search{
+    width: 100%;
+    height: 30px;
+    background-color: green;
+    color: white;
+    font-weight: bold;
+    border: none;
+}
+.fields{
+    color: red;
+    position: absolute;
+    top: 9%;
+    right: 20%;
+}
+
+table, th, td {
+    width: 50%;
+    border: 1px solid;
+  }
+
+.buy{
+    width: 100%;
+    margin: auto;
+    display: flex;
+}
+
+.include{
+    width: 90%;
+    margin: 2px;
+    height: 200px;
+    border: 1px solid black;
+}
+
+img{
+    width: 100%;
+    height: 200px;
+}
+
+@media screen and (max-width: 900px) {
+    .index{
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        padding: 10px;
+    }
+    .p1{
+        width: 100%;
+        height: 300px;
+    }
+    .form{
+        width: 100%;
+        margin-top: 0;
+    }
+    input[type=text]{
+        width: 100%;
+        padding-left: 10px;
+        height: 30px;
+    }
+    input[type=email]{
+        width: 100%;
+        padding-left: 10px;
+        height: 30px;
+    }
+    input[type=date]{
+        width: 100%;
+        padding-left: 10px;
+        height: 30px;
+    }
+    input[type=password]{
+        width: 100%;
+        padding-left: 10px;
+        height: 30px;
+    }
+    .fields{
+        color: red;
+        position: absolute;
+        top: 38%;
+        left: 130px;
+    }
+    
+    
+}
+
+@media screen and (max-width: 900px) {
+    header nav{
+        width: 100%;
+        
+        background-color: white;
+    }
+    
+    nav li{
+        display: inline-block;
+        list-style: none;
+        line-height: 50px;
+    }
+    
+    nav a{
+        padding: 10px;
+        font-size: 15px;
+        color: green;
+        font-weight: bold;
+        text-decoration: none;
+        text-transform: uppercase;
+    }
+    #work{
+        width: 300px;
+        height: 40px;
+        display: block;
+        padding-left: 10px;
+        border: 1px solid black;
+        border-radius: 5px;
+        position: relative;
+        margin-left: 15px;
+
+    }
+    .ok{
+        width: 50px;
+        position: absolute;
+        right: 70px;
+        top: 55px;
+        cursor: pointer;
+        height: 30px;
+        font-weight: bold;
+        border: none;
+        color: white;
+        background-color: green;
+    }
+    .slideshow-container {
+        width: 80%;
+    }
+    #start{
+        background-color: green;
+        color: white;
+        width: 150px;
+        height: 40px;
+        border: none;
+        margin-bottom: 10px;
+        margin-left: 10px;
+    }
+    .buy{
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+    }
+    .include{
+        width: 100%;
+    }
+  }
