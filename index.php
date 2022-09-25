@@ -1,6 +1,5 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -11,9 +10,10 @@
 
 <body>
     <?php
+    session_start();
+    $flag = false;
+    $error_username = "";
     if (isset($_POST['verify'])) {
-        $flag = false;
-        $error_username = "";
         $click = $_POST['click'] ?? 'empty';
         if ($click === 'empty') {
             $error_gender = "Please Select a  gender";
@@ -45,7 +45,9 @@
         // check if all fields is checked
         if ($flag == false) {
             if (!empty($click) && !empty($name) && !empty($username) && !empty($dateofbirth) && !empty($email) && !empty($pass1)) {
-                header("location:home.php");
+                $_SESSION['username'] = $username;
+                $_SESSION['pass1'] = $pass1;
+                header("location:signin.php");
             } else {
                 echo "<p class='fields'>Please fill all fields</p>";
             }
@@ -66,20 +68,20 @@
             </div>
             <div class="form-body">
                 <label for="">Full Name:</label> <br> 
-                <input type="text" name="name" id="" placeholder="Indicate your name">
+                <input type="text" name="name" id="" placeholder="Indicate your name" value="<?php if(isset($name)) echo $name;?>">
             </div>
             <div class="form-body">
                 <label for="">User Name:</label> <br>
-                <input type="text" name="username" id="" placeholder="choose a username"> <br>
+                <input type="text" name="username" id="" placeholder="choose a username" value="<?php if(isset($username)) echo $username;?>"> <br>
                 <span><?php if (isset($error_username)) echo $error_username; ?></span>
             </div>
             <div class="form-body">
                 <label for="">Date of birth:</label> <br>
-                <input type="date" name="dateofbirth">
+                <input type="date" name="dateofbirth" value="<?php if(isset($dateofbirth)) echo $dateofbirth;?>">
             </div>
             <div class="form-body">
                 <label for="">E-mail:</label> <br>
-                <input type="email" name="email" placeholder="Write your email">
+                <input type="email" name="email" placeholder="Write your email" value="<?php if(isset($email)) echo $email;?>">
             </div>
             <div class="form-body">
                 <label for="">Password:</label> <br>
