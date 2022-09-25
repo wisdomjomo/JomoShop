@@ -62,7 +62,7 @@ span{
     background-size: cover;
     width: 50%;
     margin-top: 30px;
-    height: 500px;
+    height: 520px;
 }
 
 .form{
@@ -104,6 +104,18 @@ input[type=password]{
 .form-body-1{
     margin-top: 10px;
     text-align: center;
+}
+
+.form-body-2{
+    width: 100%;
+    margin-top: 10px;
+    font-size: 18px;
+}
+
+.form-body-2 a{
+    text-decoration: none;
+    color: red;
+    font-size: 15px;
 }
 
 #search{
