@@ -19,8 +19,12 @@
             $error_gender = "Please Select a  gender";
             $flag = true;
         }
-        $name = $_POST['name'];
-        $username = $_POST['username'];
+        else{
+            $error_gender = "";
+            $flag = false;
+        }
+        $name = trim($_POST['name']);
+        $username = trim($_POST['username']);
         if (strlen($username) < 6) {
             $error_username = "Your username should not be less than six characters";
             $flag = true;
@@ -29,12 +33,12 @@
             $flag = false;
         }
         $dateofbirth = $_POST['dateofbirth'];
-        $email = $_POST['email'];
+        $email = trim($_POST['email']);
         if (!filter_var($email)) {
             $emailErr = "Invalid email format";
         }
-        $pass1 = $_POST['pass1'];
-        $pass2 = $_POST['pass2'];
+        $pass1 = trim($_POST['pass1']);
+        $pass2 = trim($_POST['pass2']);
         if ($pass1 !== $pass2) {
             $error_password = "Your password does not match";
             $flag = true;

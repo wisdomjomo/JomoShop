@@ -52,7 +52,7 @@
     </ul>
     <ul class="navbar-nav mr-auto ml-auto">
       <li class="nav-item active">
-        <a class="nav-link text-danger" href="home.php">Log Out<span class="sr-only">(current)</span></a>
+        <a class="nav-link text-danger" href="logout.php">Log Out<span class="sr-only">(current)</span></a>
       </li>
     </ul>
   </div>

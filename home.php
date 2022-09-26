@@ -12,6 +12,13 @@
     <link rel="stylesheet" href="design.css">
     <title>Home</title>
 </head>
+<?php
+session_start();
+if(!isset($_SESSION['confirm'])){
+  $_SESSION['notlogg_in'] = "You are not authorize to log in";
+  header('location:index.php');
+}
+?>
 <body>
 <?php
 include('header.php'); ?>
