@@ -1,31 +1,37 @@
 <?php
-    $sales  =[
-        "Iphone" => [
-            "price" => 180000, "cat" => "Phone"
-        ],
-        "Hp" => [
-            "price" => 270000, "cat" => "Laptop"
-        ],
-        "Samsung" => [
-            "price" => 320000, "cat" => "TV"
-        ],
-        "Dell" => [
-            "price" => 430000, "cat" => "Laptop"
-        ],
-        "Hissence" => [
-            "price" => 250000, "cat" => "TV"
-        ],
-        "LG" => [
-            "price" => 218000, "cat" => "Phone"
-        ],
-        "Lexus" => [
-            "price" => 8000000, "cat" => "Car"
-        ],
-        "Tecno" => [
-            "price" => 50000, "cat" => "Phone"
-        ],
-    ];
-    ?>   
+session_start();
+
+$timeOut = 60 * 6; // 6 minutes
+if (isset($_SESSION['last_active']) && (time() - $_SESSION['last_active'] > $timeOut)) {
+  session_destroy();
+  header('location:index.php');
+}
+$sales  = [
+  "Iphone" => [
+    "price" => 180000, "cat" => "Phone"
+  ],
+  "Hp" => [
+    "price" => 270000, "cat" => "Laptop"
+  ],
+  "Samsung" => [
+    "price" => 320000, "cat" => "TV"
+  ],
+  "Dell" => [
+    "price" => 430000, "cat" => "Laptop"
+  ],
+  "Hissence" => [
+    "price" => 250000, "cat" => "TV"
+  ], "LG" => [
+    "price" => 218000, "cat" => "Phone"
+  ],
+  "Lexus" => [
+    "price" => 8000000, "cat" => "Car"
+  ],
+  "Tecno" => [
+    "price" => 50000, "cat" => "Phone"
+  ],
+];
+?>
 <nav class="navbar navbar-expand-lg navbar-light bg-light">
   <a class="navbar-brand" href="home.php">Jomo-SHOP</a>
   <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
@@ -57,31 +63,30 @@
     </ul>
   </div>
 </nav>
-  <table>
-    <?php
-                    if(isset($_POST['check'])){
-                        $search = $_POST['search'];
-                        // outer loop
-                    foreach($sales as $product => $items){ 
-                        if($items["cat"] == $search){
-                        ?> 
-                        <tr>
-                            <td><?php echo "$product \n"; ?></td>
-                            <?php
-                            foreach($items as $key => $value){
-                            ?>
-                            <td><?php echo "$value \n"; ?></td>
-                            <?php
-                            }
-                            ?>
-                        </tr>
-                        <?php
-                  
-                    }
-                }
-                    
-                    }
-                    
-                    
-                    ?>
+<table>
+  <?php
+  if (isset($_POST['check'])) {
+    $search = $_POST['search'];
+    // outer loop
+    foreach ($sales as $product => $items) {
+      if ($items["cat"] == $search) {
+  ?>
+        <tr>
+          <td><?php echo "$product \n"; ?></td>
+          <?php
+          foreach ($items as $key => $value) {
+          ?>
+            <td><?php echo "$value \n"; ?></td>
+          <?php
+          }
+          ?>
+        </tr>
+  <?php
+
+      }
+    }
+  }
+
+
+  ?>
 </table>

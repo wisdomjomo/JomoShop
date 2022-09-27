@@ -13,15 +13,14 @@
     <title>Home</title>
 </head>
 <?php
-session_start();
+include('header.php'); ?>
+<?php
 if(!isset($_SESSION['confirm'])){
   $_SESSION['notlogg_in'] = "You are not authorize to log in";
   header('location:index.php');
 }
 ?>
 <body>
-<?php
-include('header.php'); ?>
 <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
   <ol class="carousel-indicators">
     <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
